@@ -175,6 +175,7 @@
     <None Include="Resources\20888.1363023335.png" />
     <None Include="Resources\ASTRONUT HUCK 1.png" />
     <None Include="Resources\imageedit_1_8519088961.png" />
+    <Content Include="Sound\pesna.wav" />
     <Content Include="UserScore.mdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
