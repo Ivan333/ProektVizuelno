@@ -17,6 +17,7 @@ namespace VizuelnoProekt
         {
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            //Pesnata treba nekako da se vcita preku metod od clasata Song,probaj importni-ja bibliotekata Microsoft.Xna.Framework.Media
 
             soundPlayer = new SoundPlayer("VizuelnoProekt.pesna.wav");
             //Form1.MaximizeBox = false;
