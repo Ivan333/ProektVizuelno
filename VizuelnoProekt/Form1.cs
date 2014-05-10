@@ -72,8 +72,6 @@ namespace VizuelnoProekt
         private void btnInstructions_Click(object sender, EventArgs e)
         {
             Application.Exit();
-            
-
         }
 
         private void btnScores_Click(object sender, EventArgs e)
