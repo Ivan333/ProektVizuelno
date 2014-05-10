@@ -17,8 +17,8 @@ namespace VizuelnoProekt
         {
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
-            
-            soundPlayer = new SoundPlayer("pesna.wav");
+
+            soundPlayer = new SoundPlayer("VizuelnoProekt.pesna.wav");
             //Form1.MaximizeBox = false;
             // nemoze so mouse da se zgolemuva no Maximase seuste raboti,a naredbava Form1.MaximazeBox ne mi ja prifakase neso,nez zaso.
             
@@ -26,17 +26,17 @@ namespace VizuelnoProekt
 
         private void Form1_Load(object sender, EventArgs e)
         {
-           soundPlayer.PlayLooping();
+           //soundPlayer.PlayLooping();
         }
 
         private void btnNewGame_Click(object sender, EventArgs e)
         {
             LevelPicker lp = new LevelPicker();
-            soundPlayer.Stop();
+            //soundPlayer.Stop();
             lp.ShowDialog();
             
             
-            soundPlayer.PlayLooping();
+            //soundPlayer.PlayLooping();
         }
 
         private void btnNewGame_MouseHover(object sender, EventArgs e)
