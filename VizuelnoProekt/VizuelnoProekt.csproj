@@ -96,6 +96,11 @@
     <Compile Include="LevelPicker.Designer.cs">
       <DependentUpon>LevelPicker.cs</DependentUpon>
     </Compile>
+    <Compile Include="Resource1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
     <Compile Include="SpaceShip classes\EnemySpaceShip.cs" />
     <Compile Include="Game.cs">
       <SubType>Form</SubType>
@@ -175,7 +180,12 @@
     <None Include="Resources\20888.1363023335.png" />
     <None Include="Resources\ASTRONUT HUCK 1.png" />
     <None Include="Resources\imageedit_1_8519088961.png" />
+    <EmbeddedResource Include="Resource1.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sound\pesna.wav" />
+    <None Include="Resources\pesna.bmp" />
     <Content Include="Sound\playerBlaster.wav" />
     <Content Include="Sound\enemyBlaster.wav" />
     <Content Include="UserScore.mdf">

@@ -26,8 +26,7 @@ namespace VizuelnoProekt
             Assembly assembly;
             assembly = Assembly.GetExecutingAssembly();
             
-            soundPlayer = new SoundPlayer(assembly.GetManifestResourceStream
-                (@"VizuelnoProekt.Sound.pesna.wav"));
+            soundPlayer = new SoundPlayer(Resource1.pesna);
             soundPlayer.PlayLooping(); 
             //Form1.MaximizeBox = false;
             // nemoze so mouse da se zgolemuva no Maximase seuste raboti,a naredbava Form1.MaximazeBox ne mi ja prifakase neso,nez zaso.
@@ -81,7 +80,8 @@ namespace VizuelnoProekt
 
         private void btnInstructions_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Form3 f = new Form3();
+            f.ShowDialog();
         }
 
         private void btnScores_Click(object sender, EventArgs e)

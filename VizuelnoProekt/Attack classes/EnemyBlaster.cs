@@ -26,8 +26,7 @@ namespace VizuelnoProekt
             Assembly assembly;
             assembly = Assembly.GetExecutingAssembly();
 
-            soundEnemyAttack = new SoundPlayer(assembly.GetManifestResourceStream
-                (@"VizuelnoProekt.Sound.enemyBlaster.wav"));
+            soundEnemyAttack = new SoundPlayer(Resource1.enemyBlaster);
             soundEnemyAttack.Play();
         }
 

@@ -19,11 +19,8 @@ namespace VizuelnoProekt
         public PlayerAttack(PlayerSpaceShip p, int v, int h)
         {
             SoundPlayer soundPlayerAttack;
-            Assembly assembly;
-            assembly = Assembly.GetExecutingAssembly();
 
-            soundPlayerAttack = new SoundPlayer(assembly.GetManifestResourceStream
-                (@"VizuelnoProekt.Sound.playerBlaster.wav"));
+            soundPlayerAttack = new SoundPlayer(Resource1.playerBlaster);
             soundPlayerAttack.Play();
 
 

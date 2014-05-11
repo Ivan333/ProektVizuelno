@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace VizuelnoProekt
 {
-    
+    // author       
 
     public class Controller
     {
