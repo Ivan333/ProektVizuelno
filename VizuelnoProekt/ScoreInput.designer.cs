@@ -1,6 +1,6 @@
 ﻿namespace VizuelnoProekt
 {
-    partial class Form2
+    partial class ScoreInput
     {
         /// <summary>
         /// Required designer variable.

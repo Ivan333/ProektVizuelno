@@ -117,7 +117,7 @@ namespace VizuelnoProekt
                 {
                     String[] st = label1.Text.Split(new char[1]{' '});
                     timer.Stop();
-                    Form2 f2 = new Form2(int.Parse(st[1]), "Win");
+                    ScoreInput f2 = new ScoreInput(int.Parse(st[1]), "Win");
                     f2.ShowDialog();
                     this.Close();
                 }
@@ -125,7 +125,7 @@ namespace VizuelnoProekt
                 {
                     timer.Stop();
                     String[] st = label1.Text.Split(new char[1]{' '});
-                    Form2 f2 = new Form2(int.Parse(st[1]), "Win");
+                    ScoreInput f2 = new ScoreInput(int.Parse(st[1]), "Win");
                     f2.ShowDialog();
                     this.Close();
                 }

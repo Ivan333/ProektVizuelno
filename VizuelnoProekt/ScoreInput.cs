@@ -11,10 +11,11 @@ using System.Windows.Forms;
 
 namespace VizuelnoProekt
 {
-    public partial class Form2 : Form
+    //author Ivan
+    public partial class ScoreInput : Form
     {
         public int score { get; set; }
-        public Form2(int skor, string text)
+        public ScoreInput(int skor, string text)
         {
             InitializeComponent();
             label2.Text = "You have " + skor.ToString();
