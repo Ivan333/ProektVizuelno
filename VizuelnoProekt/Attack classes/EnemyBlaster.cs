@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Media;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -9,6 +11,7 @@ namespace VizuelnoProekt
 {
     public class EnemyBlaster : Attack
     {
+        public SoundPlayer soundEnemyAttack;
         public Point position { get; set; }
         public int velocity { get; set; }
         public int Height { get; set; }
@@ -18,6 +21,14 @@ namespace VizuelnoProekt
             position = new Point(p.position.X + v/2, p.position.Y + 2);
             velocity = v;
             Height = h;
+
+            
+            Assembly assembly;
+            assembly = Assembly.GetExecutingAssembly();
+
+            soundEnemyAttack = new SoundPlayer(assembly.GetManifestResourceStream
+                (@"VizuelnoProekt.Sound.enemyBlaster.wav"));
+            soundEnemyAttack.Play();
         }
 
 

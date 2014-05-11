@@ -8,6 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Media;
+using System.Reflection;
+using System.IO;
+
+
 namespace VizuelnoProekt
 {
     public partial class Form1 : Form
@@ -19,7 +23,12 @@ namespace VizuelnoProekt
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             //Pesnata treba nekako da se vcita preku metod od clasata Song,probaj importni-ja bibliotekata Microsoft.Xna.Framework.Media
 
-            soundPlayer = new SoundPlayer("VizuelnoProekt.pesna.wav");
+            Assembly assembly;
+            assembly = Assembly.GetExecutingAssembly();
+            
+            soundPlayer = new SoundPlayer(assembly.GetManifestResourceStream
+                (@"VizuelnoProekt.Sound.pesna.wav"));
+            soundPlayer.PlayLooping(); 
             //Form1.MaximizeBox = false;
             // nemoze so mouse da se zgolemuva no Maximase seuste raboti,a naredbava Form1.MaximazeBox ne mi ja prifakase neso,nez zaso.
             
@@ -27,17 +36,17 @@ namespace VizuelnoProekt
 
         private void Form1_Load(object sender, EventArgs e)
         {
-           //soundPlayer.PlayLooping();
+           
         }
 
         private void btnNewGame_Click(object sender, EventArgs e)
         {
             LevelPicker lp = new LevelPicker();
-            //soundPlayer.Stop();
+            soundPlayer.Stop();
             lp.ShowDialog();
             
             
-            //soundPlayer.PlayLooping();
+            soundPlayer.PlayLooping();
         }
 
         private void btnNewGame_MouseHover(object sender, EventArgs e)

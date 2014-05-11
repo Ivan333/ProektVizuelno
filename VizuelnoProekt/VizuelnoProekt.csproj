@@ -175,7 +175,9 @@
     <None Include="Resources\20888.1363023335.png" />
     <None Include="Resources\ASTRONUT HUCK 1.png" />
     <None Include="Resources\imageedit_1_8519088961.png" />
-    <EmbeddedResource Include="pesna.wav" />
+    <EmbeddedResource Include="Sound\pesna.wav" />
+    <Content Include="Sound\playerBlaster.wav" />
+    <Content Include="Sound\enemyBlaster.wav" />
     <Content Include="UserScore.mdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -201,9 +203,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Sound\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
