@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace VizuelnoProekt
 {
+    // author: Ivan
     public partial class Game : Form
     {
         public Image img { get; set; }
@@ -29,7 +30,10 @@ namespace VizuelnoProekt
         public bool timerDown { get; set; }
         public int poeni { get; set; }
 
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="level">number of level</param>
         public Game(int level)
         {
 
@@ -65,6 +69,8 @@ namespace VizuelnoProekt
             Graphics g = e.Graphics;
             c.Draw(g);
         }
+
+        // ovde se pridvizuvaat napadite , neprijatelite i se proveruva dali igrata e zavrsena
         void timer_Tick(object sender, EventArgs e)
         {
             int a = c.areValidEnemeis(PANEL_WIDTH);
@@ -129,7 +135,7 @@ namespace VizuelnoProekt
 
         public Timer timer { get; set; }
 
-
+        // potrebo za pritiskanje na poveke dugminja odednas
         private void Form1_KeyUp(object sender, KeyEventArgs e)
         {
             if (e.KeyData == Keys.Left)
@@ -149,6 +155,9 @@ namespace VizuelnoProekt
             }
 
         }
+
+
+        // Proveruva koj taster e stisnat isto taka implementirano e drzenje na poveke tasteri
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {

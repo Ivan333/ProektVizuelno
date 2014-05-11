@@ -14,6 +14,11 @@ using System.IO;
 
 namespace VizuelnoProekt
 {
+    //author: Ivan
+
+    /// <summary>
+    /// Starscreen Form
+    /// </summary>
     public partial class Form1 : Form
     {
         private SoundPlayer soundPlayer;

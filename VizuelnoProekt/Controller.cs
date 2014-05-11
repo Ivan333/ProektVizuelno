@@ -8,8 +8,9 @@ using System.Threading.Tasks;
 
 namespace VizuelnoProekt
 {
-    // author       
+    // author: Ivan    
 
+    
     public class Controller
     {
         public PlayerSpaceShip player { get; set; }
@@ -22,7 +23,14 @@ namespace VizuelnoProekt
         public int velocity { get; set; }
         public int Height { get; set; }
         Random r { get; set; }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="p">PlayerSpaceship object</param>
+        /// <param name="w">width of spaceship</param>
+        /// <param name="h">height of spaceship</param>
+        /// <param name="v">velocity</param>
+        /// <param name="H">height of board</param>
         public Controller(PlayerSpaceShip p, int w, int h, int v, int H)
         {
             enemies = new List<EnemySpaceShip>();
@@ -36,12 +44,18 @@ namespace VizuelnoProekt
             eAttacks = new List<EnemyBlaster>();
             
         }
-
+        /// <summary>
+        /// add an enemy
+        /// </summary>
+        /// <param name="s">EnemySpaceShip to add</param>
         public void addEnemy(EnemySpaceShip s)
         {
             enemies.Add(s);
         }
-
+        /// <summary>
+        /// Draws all enemies, player and all attacks
+        /// </summary>
+        /// <param name="g"></param>
         public void Draw(Graphics g)
         {
             if(player != null)
@@ -59,12 +73,22 @@ namespace VizuelnoProekt
                 item.Draw(g);
             }
         }
-
+        /// <summary>
+        /// Moves player
+        /// </summary>
+        /// <param name="d">Direction of spaceship</param>
+        /// <param name="w"></param>
+        /// <param name="h"></param>
         public void movePlayer(SpaceShip.Direction d, int w, int h)
         {
             player.move(d, w);
         }
-
+        /// <summary>
+        /// Moves enemy
+        /// </summary>
+        /// <param name="w"></param>
+        /// <param name="h"></param>
+        /// <param name="d"></param>
         public void moveEnemy(int w, int h, SpaceShip.Direction d)
         {
             foreach (EnemySpaceShip es in enemies)
@@ -72,13 +96,17 @@ namespace VizuelnoProekt
                 es.move(d,w);
             }
         }
-
+        /// <summary>
+        /// adds player attack;
+        /// </summary>
         public void addAttack()
         {
             pAttacks.Add(new PlayerAttack(player, skaleWidth, Height));
             
         }
-
+        /// <summary>
+        /// moves all attacks
+        /// </summary>
         public void moveAttacks()
         {
             foreach (PlayerAttack at in pAttacks)
@@ -90,6 +118,11 @@ namespace VizuelnoProekt
                 item.move();
             }
         }
+
+        /// <summary>
+        /// Checks for colison and returns points for player
+        /// </summary>
+        /// <returns>points for player</returns>
         public int checkColision()
         {
             int poeni = 0;
@@ -114,7 +147,10 @@ namespace VizuelnoProekt
             }
             return poeni;
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns>true if Player is dead</returns>
         public bool checkIsPlayerDead()
         {
             for (int i = eAttacks.Count - 1; i >= 0; i--)
@@ -131,7 +167,11 @@ namespace VizuelnoProekt
             }
             return false;
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="w"></param>
+        /// <returns></returns>
         public int areValidEnemeis(int w)
         {
             foreach (EnemySpaceShip et in enemies)
@@ -143,7 +183,9 @@ namespace VizuelnoProekt
             }
             return 0;
         }
-
+        /// <summary>
+        /// adds enemy attack
+        /// </summary>
         public void addEnemyAttacks()
         {
             foreach (EnemySpaceShip es in enemies)
@@ -152,7 +194,10 @@ namespace VizuelnoProekt
                     eAttacks.Add(new EnemyBlaster(es,velocity,Height));
             }
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns>true if player has won</returns>
         public bool isWon()
         {
             return enemies.Count == 0 ? true : false;

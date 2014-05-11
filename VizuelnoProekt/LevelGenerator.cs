@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace VizuelnoProekt
 {
+    //author: Ivan
     class LevelGenerator
     {
 
@@ -16,7 +17,14 @@ namespace VizuelnoProekt
         {
 
         }
-
+        /// <summary>
+        /// Generates level3
+        /// </summary>
+        /// <param name="c"></param>
+        /// <param name="visina">height of grid</param>
+        /// <param name="sirina">width of grid</param>
+        /// <param name="widthSk">width of spaceship</param>
+        /// <param name="heigthSk">height of spaceship</param>
         public void generateLevel3(Controller c, int visina, int sirina,int widthSk, int heigthSk)
         {
             for (int i = 0; i < visina; i++)
@@ -27,6 +35,15 @@ namespace VizuelnoProekt
                 }
             }
         }
+
+        /// <summary>
+        /// Generates level3
+        /// </summary>
+        /// <param name="c"></param>
+        /// <param name="visina">height of grid</param>
+        /// <param name="sirina">width of grid</param>
+        /// <param name="widthSk">width of spaceship</param>
+        /// <param name="heigthSk">height of spaceship</param>
         public void generateLevel2(Controller c, int visina, int sirina, int widthSk, int heigthSk)
         {
             for (int i = 0; i < visina; i++)
@@ -39,6 +56,14 @@ namespace VizuelnoProekt
                 }
             }
         }
+        /// <summary>
+        /// Generates level3
+        /// </summary>
+        /// <param name="c"></param>
+        /// <param name="visina">height of grid</param>
+        /// <param name="sirina">width of grid</param>
+        /// <param name="widthSk">width of spaceship</param>
+        /// <param name="heigthSk">height of spaceship</param>
         public void generateLevel1(Controller c, int visina, int sirina, int widthSk, int heigthSk)
         {
             for (int i = 0; i < visina; i++)

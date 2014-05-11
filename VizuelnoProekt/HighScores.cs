@@ -10,6 +10,11 @@ using System.Windows.Forms;
 
 namespace VizuelnoProekt
 {
+    //author: Ivan
+
+    /// <summary>
+    /// Klasa za prikazuvanje na rezultati od baza
+    /// </summary>
     public partial class HighScores : Form
     {
         public HighScores()
@@ -22,8 +27,6 @@ namespace VizuelnoProekt
             // TODO: This line of code loads data into the 'userScoreDataSet.Table' table. You can move, or remove it, as needed.
             this.tableTableAdapter.Fill(this.userScoreDataSet.Table);
             // TODO: This line of code loads data into the 'userScoreDataSet.Table' table. You can move, or remove it, as needed.
-
-            
         }
 
         private void button1_Click(object sender, EventArgs e)

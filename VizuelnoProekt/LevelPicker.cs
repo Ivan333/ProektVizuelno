@@ -10,6 +10,10 @@ using System.Windows.Forms;
 
 namespace VizuelnoProekt
 {
+    // author: Ivan
+    /// <summary>
+    /// 
+    /// </summary>
     public partial class LevelPicker : Form
     {
         public LevelPicker()
